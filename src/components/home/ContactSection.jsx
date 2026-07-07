@@ -9,6 +9,9 @@ import {
   FaMapMarkerAlt,
   FaPaperPlane,
 } from "react-icons/fa";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
+import Button from "../common/Button";
 
 const schema = yup.object({
   name: yup.string().required("Full Name is required"),
@@ -88,23 +91,15 @@ const ContactSection = () => {
 
   return (
     <section className="bg-gray-100 py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mb-16 text-center">
-          <span className="font-semibold uppercase tracking-[4px] text-blue-700">
-            Contact Us
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold text-gray-900">
-            Get In Touch
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-gray-600">
-            We'd love to hear from you. Feel free to contact us for dealership,
-            wholesale orders, product inquiries or any other questions.
-          </p>
-        </div>
+        <SectionHeading
+          subtitle="Contact Us"
+          title="Get In Touch"
+          description="We'd love to hear from you. Feel free to contact us for dealership,
+            wholesale orders, product inquiries or any other questions."
+        />
 
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Left */}
@@ -246,20 +241,20 @@ const ContactSection = () => {
                 </p>
               </div>
 
-              <button
+              <Button
                 type="submit"
                 disabled={loading}
-                className="flex items-center justify-center gap-3 rounded-xl bg-blue-700 px-8 py-4 font-semibold text-white transition hover:bg-blue-800 disabled:cursor-not-allowed disabled:bg-gray-400"
+                className="rounded-xl w-full"
                 aria-label="Send Message"
               >
                 <FaPaperPlane />
 
                 {loading ? "Sending..." : "Send Message"}
-              </button>
+              </Button>
             </div>
           </form>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

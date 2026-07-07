@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { FaArrowRight, FaPhoneAlt } from "react-icons/fa";
 import ctaBg from "../../assets/images/cta-bg.webp";
+import Button from "./Button";
 
 const CTASection = () => {
   return (
@@ -61,23 +61,25 @@ const CTASection = () => {
           {/* Buttons */}
 
           <div className="mt-12 flex flex-col justify-center gap-5 sm:flex-row">
-            <Link
+            <Button
               to="/contact"
-              className="inline-flex items-center justify-center gap-3 rounded-xl bg-blue-400 px-8 py-4 font-semibold text-blue-900 transition duration-300 hover:scale-105 hover:bg-blue-300"
+              className="rounded-xl"
               aria-label="Contact Us"
+              variant="lightBlue"
             >
               Contact Us
               <FaPhoneAlt />
-            </Link>
+            </Button>
 
-            <Link
+            <Button
               to="/products"
-              className="inline-flex items-center justify-center gap-3 rounded-xl border border-white/40 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur transition duration-300 hover:bg-white hover:text-blue-900"
+              className="rounded-xl"
               aria-label="Explore Products"
+              variant="white"
             >
               Explore Products
               <FaArrowRight />
-            </Link>
+            </Button>
           </div>
         </motion.div>
       </div>

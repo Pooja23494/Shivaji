@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import factory from "../../assets/images/about/factory.webp";
+import Button from "../common/Button";
 
 const features = [
   "Premium Quality Poha",
@@ -82,12 +83,9 @@ const CompanyIntro = () => {
               ))}
             </div>
 
-            <button
-              className="mt-10 rounded-xl bg-blue-700 px-8 py-4 font-semibold text-white transition hover:bg-blue-800"
-              aria-label="Learn More"
-            >
+            <Button className="mt-10 rounded-xl" aria-label="Learn More">
               Learn More
-            </button>
+            </Button>
           </motion.div>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { FaHeadset, FaTruck, FaHandshake, FaAward } from "react-icons/fa";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const features = [
   {
@@ -35,24 +37,16 @@ const features = [
 const WhyContact = () => {
   return (
     <section className="bg-white py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[4px] text-blue-700">
-            Why Choose Us
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            We're Always Ready to Help
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            From product inquiries to bulk supply and dealership opportunities,
+        <SectionHeading
+          subtitle="Why Choose Us"
+          title="We're Always Ready to Help"
+          description="From product inquiries to bulk supply and dealership opportunities,
             our dedicated team is committed to providing exceptional service and
-            premium-quality products.
-          </p>
-        </div>
+            premium-quality products."
+        />
 
         {/* Cards */}
 
@@ -108,7 +102,7 @@ const WhyContact = () => {
             );
           })}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

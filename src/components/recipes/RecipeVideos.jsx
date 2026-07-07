@@ -3,27 +3,21 @@ import { motion } from "framer-motion";
 import { FaPlay, FaClock } from "react-icons/fa";
 import videos from "../../data/videos";
 import VideoModal from "./VideoModal";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const RecipeVideos = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   return (
     <section className="bg-white py-24">
-      <div className="container mx-auto px-5">
-        <div className="mb-16 text-center">
-          <p className="font-semibold uppercase tracking-[5px] text-blue-700">
-            Watch & Learn
-          </p>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Delicious Poha Recipes
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-gray-600">
-            Watch easy step-by-step videos and prepare delicious recipes using
-            Shivaji Good Poha.
-          </p>
-        </div>
+      <Container>
+        <SectionHeading
+          subtitle="Watch & Learn"
+          title="Delicious Poha Recipes"
+          description="Watch easy step-by-step videos and prepare delicious recipes using
+            Shivaji Good Poha."
+        />
 
         <div className="grid gap-8 lg:grid-cols-3">
           {videos.map((video, index) => (
@@ -77,7 +71,7 @@ const RecipeVideos = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
 
       <VideoModal
         video={selectedVideo}

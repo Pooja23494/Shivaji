@@ -1,26 +1,20 @@
 import { motion } from "framer-motion";
 import timeline from "../../data/timeline";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const CompanyTimeline = () => {
   return (
     <section className="bg-white py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mx-auto mb-20 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[4px] text-blue-700">
-            Our Journey
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Company Timeline
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Every milestone reflects our dedication to quality, innovation and
-            customer satisfaction.
-          </p>
-        </div>
+        <SectionHeading
+          subtitle="Our Journey"
+          title="Company Timeline"
+          description="Every milestone reflects our dedication to quality, innovation and
+            customer satisfaction."
+        />
 
         {/* Timeline */}
 
@@ -81,7 +75,7 @@ const CompanyTimeline = () => {
             );
           })}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

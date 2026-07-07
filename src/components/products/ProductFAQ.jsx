@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const faqs = [
   {
@@ -44,23 +46,15 @@ const ProductFAQ = () => {
 
   return (
     <section className="bg-white py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[4px] text-blue-700">
-            Frequently Asked Questions
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Have Questions?
-          </h2>
-
-          <p className="mt-6 text-lg text-gray-600">
-            Find answers to the most commonly asked questions about our
-            products, packaging, and services.
-          </p>
-        </div>
+        <SectionHeading
+          subtitle="Frequently Asked Questions"
+          title="Have Questions?"
+          description="Find answers to the most commonly asked questions about our
+            products, packaging, and services."
+        />
 
         {/* FAQ */}
 
@@ -119,7 +113,7 @@ const ProductFAQ = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

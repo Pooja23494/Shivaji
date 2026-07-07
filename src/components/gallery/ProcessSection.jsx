@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { FaSeedling, FaCogs, FaBoxOpen, FaTruck } from "react-icons/fa";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const process = [
   {
@@ -35,23 +37,15 @@ const process = [
 const ProcessSection = () => {
   return (
     <section className="bg-white py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mx-auto mb-20 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[5px] text-blue-700">
-            Manufacturing Process
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            From Farm To Your Table
-          </h2>
-
-          <p className="mt-6 text-lg text-gray-600">
-            Every step of our manufacturing process follows strict quality
-            standards to ensure fresh, hygienic and premium-quality Poha.
-          </p>
-        </div>
+        <SectionHeading
+          subtitle=" Manufacturing Process"
+          title="From Farm To Your Table"
+          description="Every step of our manufacturing process follows strict quality
+            standards to ensure fresh, hygienic and premium-quality Poha."
+        />
 
         {/* Timeline */}
 
@@ -100,7 +94,7 @@ const ProcessSection = () => {
             })}
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

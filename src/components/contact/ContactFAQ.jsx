@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const faqs = [
   {
@@ -35,19 +37,14 @@ const ContactFAQ = () => {
 
   return (
     <section className="bg-gray-50 py-24">
-      <div className="container mx-auto max-w-4xl px-5">
-        <div className="mb-16 text-center">
-          <p className="font-semibold uppercase tracking-[4px] text-blue-700">
-            Frequently Asked Questions
-          </p>
+      <Container className="max-w-4xl">
 
-          <h2 className="mt-4 text-4xl font-bold">Have Questions?</h2>
-
-          <p className="mt-5 text-gray-600">
-            Find quick answers to the most common questions about our products,
-            services, and dealership opportunities.
-          </p>
-        </div>
+        <SectionHeading
+          subtitle="Frequently Asked Questions"
+          title="Have Questions?"
+          description="Find quick answers to the most common questions about our products,
+            services, and dealership opportunities."
+        />
 
         <div className="space-y-5">
           {faqs.map((faq, index) => (
@@ -85,7 +82,7 @@ const ContactFAQ = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

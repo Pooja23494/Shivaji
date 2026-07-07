@@ -2,27 +2,21 @@ import { motion } from "framer-motion";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 import team, { owner } from "../../data/team";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const TeamSection = () => {
   return (
     <section className="bg-linear-to-b from-gray-50 to-white py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[4px] text-blue-700">
-            Our Team
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Meet The People Behind Our Success
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Our experienced professionals work together with passion and
-            dedication to deliver premium quality products.
-          </p>
-        </div>
+        <SectionHeading
+          subtitle="Our Team"
+          title="Meet The People Behind Our Success"
+          description="Our experienced professionals work together with passion and
+            dedication to deliver premium quality products."
+        />
 
         {/* Founder */}
 
@@ -138,7 +132,7 @@ const TeamSection = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

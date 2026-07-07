@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import Button from "../common/Button";
 
 import aboutImage from "../../assets/images/about-factory.webp";
 
@@ -89,13 +89,14 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <Link
+            <Button
               to="/about"
-              className="mt-10 inline-flex rounded-full bg-blue-700 px-8 py-4 text-white transition hover:bg-blue-400 hover:text-black"
+              className="mt-10"
               aria-label="Learn More"
+              variant="secondary"
             >
               Learn More
-            </Link>
+            </Button>
           </motion.div>
         </div>
       </div>

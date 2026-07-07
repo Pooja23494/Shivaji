@@ -1,16 +1,22 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import banner from "../../assets/images/about/about-banner.webp";
 import { FaChevronRight } from "react-icons/fa";
-import banner from "../../assets/images/recipes/recipe-banner.webp";
 
-const RecipeBanner = () => {
+const AboutBanner = ({
+  image,
+  title,
+  description,
+  breadcrumb,
+  height = "h-[450px]",
+}) => {
   return (
     <section
-      className="relative flex h-95 items-center justify-center overflow-hidden md:h-125"
+      className="relative flex h-87.5 items-center justify-center overflow-hidden md:h-105"
       style={{
-        backgroundImage: `url(${banner})`,
-        backgroundPosition: "center",
+        backgroundImage: `url(${image})`,
         backgroundSize: "cover",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -41,45 +47,33 @@ const RecipeBanner = () => {
           transition={{ duration: 0.6 }}
           className="rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-medium uppercase tracking-[4px] backdrop-blur-md"
         >
-          Delicious Recipes
+          {title}
         </motion.span>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.2,
-          }}
-          className="mt-6 text-4xl font-extrabold md:text-6xl"
-        >
-          Healthy & Tasty Poha Recipes
-        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            delay: 0.5,
+            delay: 0.3,
             duration: 0.8,
           }}
-          className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-200"
+          className="mx-auto mt-5 max-w-2xl text-lg text-gray-200"
         >
-          Discover delicious breakfast recipes made with Shivaji Good Poha.
-          Quick, healthy, nutritious, and loved by every family.
+          {description}
         </motion.p>
 
         {/* Breadcrumb */}
 
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.7,
+            delay: 0.5,
+            duration: 0.8,
           }}
-          className="mt-10 flex items-center justify-center gap-3 text-sm md:text-base"
+          className="mt-8 flex items-center justify-center gap-3 text-sm font-medium md:text-base"
         >
-          <Link to="/" className="transition duration-300 hover:text-blue-400">
+          <Link to="/" className="transition hover:text-blue-400">
             Home
           </Link>
 
@@ -88,7 +82,7 @@ const RecipeBanner = () => {
             aria-label="Right Arrow"
           />
 
-          <span className="font-semibold text-blue-400">Recipes</span>
+          <span className="text-blue-400">{title}</span>
         </motion.div>
       </div>
 
@@ -98,14 +92,15 @@ const RecipeBanner = () => {
         className="absolute bottom-0 left-0 w-full"
         viewBox="0 0 1440 120"
         fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           fill="#ffffff"
-          d="M0,64L80,69.3C160,75,320,85,480,90.7C640,96,800,96,960,85.3C1120,75,1280,53,1360,42.7L1440,32V120H0Z"
+          d="M0,80L80,74.7C160,69,320,59,480,58.7C640,59,800,69,960,80C1120,91,1280,101,1360,106.7L1440,112V120H1360C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120H0Z"
         />
       </svg>
     </section>
   );
 };
 
-export default RecipeBanner;
+export default AboutBanner;

@@ -1,31 +1,22 @@
 import { motion } from "framer-motion";
-import {
-  FaInstagram,
-  FaHeart,
-  FaRegCommentDots,
-} from "react-icons/fa";
+import { FaInstagram, FaHeart, FaRegCommentDots } from "react-icons/fa";
 import instagramGallery from "../../data/instagramGallery";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
+import Button from "../common/Button";
 
 const InstagramGallery = () => {
   return (
     <section className="bg-gray-50 py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[5px] text-blue-700">
-            Social Gallery
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Follow Our Journey
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Stay connected with Shivaji Good Poha and explore our latest
-            products, manufacturing moments, customer experiences and events.
-          </p>
-        </div>
+        <SectionHeading
+          subtitle="Social Gallery"
+          title="Follow Our Journey"
+          description="Stay connected with Shivaji Good Poha and explore our latest
+            products, manufacturing moments, customer experiences and events."
+        />
 
         {/* Grid */}
 
@@ -76,18 +67,18 @@ const InstagramGallery = () => {
         {/* Button */}
 
         <div className="mt-16 text-center">
-          <a
+          <Button
             href="https://www.instagram.com/shivaji_6914?igsh=ajNqYzlrMHEzdHI="
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-full bg-blue-700 px-8 py-4 font-semibold text-white transition hover:bg-blue-800"
+            className="rounded-xl"
             aria-label="Instagram"
           >
             <FaInstagram />
             Follow Us on Instagram
-          </a>
+          </Button>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

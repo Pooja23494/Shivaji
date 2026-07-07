@@ -6,6 +6,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Button from "../common/Button";
 
 const ProductInquiry = () => {
   return (
@@ -130,34 +131,36 @@ const ProductInquiry = () => {
           {/* Buttons */}
 
           <div className="mt-14 flex flex-wrap justify-center gap-5">
-            <a
+            <Button
               href="https://wa.me/917698755577"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 rounded-xl bg-green-500 px-8 py-4 font-semibold text-white shadow-lg transition hover:-translate-y-1 hover:bg-green-600"
+              className="bg-green-500 text-white hover:bg-green-600 rounded-xl"
               aria-label="Whatsapp"
             >
               <FaWhatsapp size={22} />
               WhatsApp Us
-            </a>
+            </Button>
 
-            <a
+            <Button
               href="tel:+917698755577"
-              className="flex items-center gap-3 rounded-xl bg-blue-400 px-8 py-4 font-semibold text-blue-900 shadow-lg transition hover:-translate-y-1 hover:bg-blue-300"
+              className="rounded-xl"
+              variant="lightBlue"
               aria-label="Phone"
             >
               <FaPhoneAlt />
               Call Now
-            </a>
+            </Button>
 
-            <a
+            <Button
               href="mailto:shivajigoodpoha@gmail.com"
-              className="flex items-center gap-3 rounded-xl border border-white bg-white/10 px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-blue-900"
+              className="rounded-xl"
+              variant="white"
               aria-label="Email"
             >
               <FaEnvelope />
               Email Us
-            </a>
+            </Button>
           </div>
 
           {/* Contact Page Button */}

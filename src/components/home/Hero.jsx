@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import Button from "../common/Button";
 import heroImage from "../../assets/images/hero-poha.webp";
 
 const Hero = () => {
@@ -33,21 +33,13 @@ const Hero = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                to="/products"
-                className="rounded-full bg-blue-700 px-8 py-4 font-semibold text-white shadow-lg transition hover:bg-blue-800"
-                aria-label="Explore Products"
-              >
+              <Button to="/products" aria-label="Explore Products">
                 Explore Products
-              </Link>
+              </Button>
 
-              <Link
-                to="/contact"
-                className="rounded-full border-2 border-blue-700 px-8 py-4 font-semibold text-blue-700 transition hover:bg-blue-700 hover:text-white"
-                aria-label="Contact us"
-              >
+              <Button to="/contact" variant="outline" aria-label="Contact Us">
                 Contact Us
-              </Link>
+              </Button>
             </div>
 
             {/* Stats */}
@@ -84,6 +76,7 @@ const Hero = () => {
               width={560}
               height={373}
               loading="eager"
+              fetchPriority="high"
               decoding="async"
               animate={{ y: [0, -12, 0] }}
               transition={{

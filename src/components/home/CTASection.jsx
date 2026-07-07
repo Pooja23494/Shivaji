@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Button from "../common/Button";
 
 const CTASection = () => {
   return (
@@ -15,21 +15,13 @@ const CTASection = () => {
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-5">
-            <Link
-              to="/products"
-              className="rounded-full bg-blue-700 px-8 py-4 font-semibold text-white transition hover:bg-blue-800"
-              aria-label="View Products"
-            >
+            <Button to="/products" aria-label="View Products">
               View Products
-            </Link>
+            </Button>
 
-            <Link
-              to="/contact"
-              className="rounded-full border-2 border-blue-700 px-8 py-4 font-semibold text-blue-700 transition hover:bg-blue-700 hover:text-white"
-              aria-label="Contact us"
-            >
+            <Button to="/contact" variant="outline" aria-label="Contact Us">
               Contact Us
-            </Link>
+            </Button>
           </div>
         </div>
       </div>

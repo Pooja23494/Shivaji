@@ -5,6 +5,9 @@ import {
   FaDownload,
   FaCheckCircle,
 } from "react-icons/fa";
+import Container from "../common/Container";
+import SectionHeading from "../common/SectionHeading";
+import Button from "../common/Button";
 
 const packages = [
   {
@@ -64,23 +67,15 @@ const specifications = [
 const PackagingSection = () => {
   return (
     <section className="bg-gray-50 py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[4px] text-blue-700">
-            Packaging
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Available Packaging Sizes
-          </h2>
-
-          <p className="mt-6 text-lg text-gray-600">
-            Flexible packaging options suitable for households, retailers,
-            wholesalers and bulk buyers.
-          </p>
-        </div>
+        <SectionHeading
+          subtitle="Packaging"
+          title="Available Packaging Sizes"
+          description="Flexible packaging options suitable for households, retailers,
+            wholesalers and bulk buyers."
+        />
 
         {/* Package Cards */}
 
@@ -128,11 +123,11 @@ const PackagingSection = () => {
 
         {/* Specifications */}
 
-        <div className="mt-24 rounded-[35px] bg-white p-10 shadow-xl">
-          <div className="mb-10 flex items-center gap-4">
+        <div className="mt-16 rounded-3xl bg-white p-5 shadow-xl sm:mt-20 sm:p-8 lg:mt-24 lg:p-10">
+          <div className="mb-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:items-center sm:text-left">
             <div
-              className="rounded-xl bg-blue-700 p-4 text-white"
-              aria-label="Weight Hanging"
+              className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-700 text-2xl text-white shadow-lg"
+              aria-label="weight hanging"
             >
               <FaWeightHanging />
             </div>
@@ -150,18 +145,19 @@ const PackagingSection = () => {
             {specifications.map((item) => (
               <div
                 key={item.title}
-                className="flex items-center justify-between rounded-xl border border-gray-200 p-5"
+                className="flex flex-col gap-3 rounded-xl border border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5"
               >
                 <div className="flex items-center gap-3">
-                  <FaCheckCircle
-                    className="text-green-600"
-                    aria-label="Check Circle"
-                  />
+                  <FaCheckCircle className="shrink-0 text-green-600" />
 
-                  <span className="font-semibold">{item.title}</span>
+                  <span className="font-semibold text-gray-800">
+                    {item.title}
+                  </span>
                 </div>
 
-                <span className="text-gray-600">{item.value}</span>
+                <span className="rounded-lg bg-gray-100 px-3 py-2 text-sm font-medium text-gray-700 sm:bg-transparent sm:px-0 sm:py-0">
+                  {item.value}
+                </span>
               </div>
             ))}
           </div>
@@ -169,16 +165,13 @@ const PackagingSection = () => {
           {/* Download */}
 
           <div className="mt-10 text-center">
-            <button
-              className="inline-flex items-center gap-3 rounded-xl bg-blue-700 px-8 py-4 font-semibold text-white transition hover:bg-blue-800"
-              aria-label="Download"
-            >
+            <Button className="gap-3 rounded-xl" aria-label="Download">
               <FaDownload />
               Download Product Brochure
-            </button>
+            </Button>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

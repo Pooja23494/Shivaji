@@ -2,6 +2,8 @@ import { useState } from "react";
 import recipes from "../../data/recipes";
 import RecipeGrid from "./RecipeGrid";
 import RecipeModal from "./RecipeModal";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const categories = [
   "All",
@@ -23,18 +25,12 @@ const RecipeCategories = () => {
 
   return (
     <section className="bg-gray-50 py-24">
-      <div className="container mx-auto px-5">
-        <div className="mb-16 text-center">
-          <span className="font-semibold uppercase tracking-[5px] text-blue-700">
-            Our Recipes
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold">Browse Delicious Recipes</h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-gray-600">
-            Discover healthy and tasty recipes made using Shivaji Good Poha.
-          </p>
-        </div>
+      <Container>
+        <SectionHeading
+          subtitle="Our Recipes"
+          title="Browse Delicious Recipes"
+          description=" Discover healthy and tasty recipes made using Shivaji Good Poha."
+        />
 
         {/* Filter Buttons */}
 
@@ -56,7 +52,7 @@ const RecipeCategories = () => {
         </div>
 
         <RecipeGrid recipes={filtered} onView={setSelectedRecipe} />
-      </div>
+      </Container>
       <RecipeModal
         recipe={selectedRecipe}
         isOpen={!!selectedRecipe}

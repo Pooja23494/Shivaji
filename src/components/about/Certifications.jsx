@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import certifications from "../../data/certifications";
 import { FaShieldAlt, FaAward, FaCheckCircle } from "react-icons/fa";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const qualityPoints = [
   {
@@ -23,24 +25,16 @@ const qualityPoints = [
 const Certifications = () => {
   return (
     <section className="bg-white py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[4px] text-blue-700">
-            Certifications
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Quality Assurance
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            We follow strict manufacturing standards and quality control
+        <SectionHeading
+          subtitle="Certifications"
+          title="Quality Assurance"
+          description="We follow strict manufacturing standards and quality control
             processes to ensure every pack of Shivaji Good Poha meets customer
-            expectations.
-          </p>
-        </div>
+            expectations."
+        />
 
         {/* Certificates */}
 
@@ -123,7 +117,7 @@ const Certifications = () => {
             );
           })}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

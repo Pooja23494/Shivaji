@@ -1,27 +1,21 @@
 import { motion } from "framer-motion";
 import { FaLightbulb } from "react-icons/fa";
 import cookingTips from "../../data/cookingTips";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const CookingTips = () => {
   return (
     <section className="bg-linear-to-b from-white to-gray-50 py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[5px] text-blue-700">
-            Kitchen Secrets
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Cooking Tips for Perfect Poha
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Simple cooking techniques that make every plate of Shivaji Good Poha
-            softer, tastier and healthier.
-          </p>
-        </div>
+        <SectionHeading
+          subtitle="Kitchen Secrets"
+          title="Cooking Tips for Perfect Poha"
+          description="Simple cooking techniques that make every plate of Shivaji Good Poha
+            softer, tastier and healthier."
+        />
 
         {/* Cards */}
 
@@ -89,7 +83,7 @@ const CookingTips = () => {
             </div>
           </div>
         </motion.div>
-      </div>
+      </Container>
     </section>
   );
 };

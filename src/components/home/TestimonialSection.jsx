@@ -5,6 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../styles/swiper.css";
+import Container from "../common/Container";
+import SectionHeading from "../common/SectionHeading";
 
 const testimonials = [
   {
@@ -27,14 +29,11 @@ const testimonials = [
 const TestimonialSection = () => {
   return (
     <section className="bg-white py-24 overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="uppercase tracking-[5px] text-blue-700 font-semibold">
-            Testimonials
-          </p>
-
-          <h2 className="text-4xl font-bold">What Our Customers Say</h2>
-        </div>
+      <Container>
+        <SectionHeading
+          subtitle="Testimonials"
+          title="What Our Customers Say"
+        />
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -76,7 +75,7 @@ const TestimonialSection = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </Container>
     </section>
   );
 };

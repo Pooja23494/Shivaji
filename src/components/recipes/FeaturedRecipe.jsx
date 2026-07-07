@@ -2,27 +2,22 @@ import { motion } from "framer-motion";
 import { FaClock, FaUsers, FaStar, FaFire, FaArrowRight } from "react-icons/fa";
 
 import featuredRecipe from "../../data/featuredRecipe";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
+import Button from "../common/Button";
 
 const FeaturedRecipe = () => {
   return (
     <section className="bg-white py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mb-16 text-center">
-          <span className="font-semibold uppercase tracking-[5px] text-blue-700">
-            Featured Recipe
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Chef's Special Poha
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-gray-600 leading-8">
-            Start your day with a healthy and flavorful breakfast made using
-            Shivaji Good Poha.
-          </p>
-        </div>
+        <SectionHeading
+          subtitle="Featured Recipe"
+          title="Chef's Special Poha"
+          description="Start your day with a healthy and flavorful breakfast made using
+            Shivaji Good Poha."
+        />
 
         {/* Card */}
 
@@ -118,17 +113,14 @@ const FeaturedRecipe = () => {
 
               {/* Button */}
 
-              <button
-                className="mt-10 flex items-center gap-3 rounded-full bg-blue-700 px-8 py-4 font-semibold text-white transition hover:bg-blue-800"
-                aria-label="View Recipe"
-              >
+              <Button className="mt-10" aria-label="View Recipe">
                 View Full Recipe
                 <FaArrowRight />
-              </button>
+              </Button>
             </div>
           </div>
         </motion.div>
-      </div>
+      </Container>
     </section>
   );
 };

@@ -5,6 +5,8 @@ import {
   FaBoxOpen,
   FaTruck,
 } from "react-icons/fa";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const process = [
   {
@@ -32,17 +34,11 @@ const process = [
 const ManufacturingProcess = () => {
   return (
     <section className="bg-gray-50 py-24">
-      <div className="container mx-auto px-6">
-        <div className="mb-16 text-center">
-          <p className="font-semibold uppercase tracking-widest text-blue-700">
-            Manufacturing Process
-          </p>
-
-          <h2 className="mt-4 text-4xl font-bold text-gray-900">
-            From Rice to Your Plate
-          </h2>
-        </div>
-
+      <Container>
+        <SectionHeading
+          subtitle="Manufacturing Process"
+          title="From Rice to Your Plate"
+        />
         <div className="grid gap-10 md:grid-cols-5">
           {process.map((item, index) => (
             <div key={item.title} className="relative text-center">
@@ -58,7 +54,7 @@ const ManufacturingProcess = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

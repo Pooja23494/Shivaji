@@ -37,6 +37,8 @@ const Navbar = () => {
               src={logo}
               alt="logo"
               className="h-16 w-auto"
+              width={123}
+              height={80}
               loading="lazy"
               decoding="async"
             />

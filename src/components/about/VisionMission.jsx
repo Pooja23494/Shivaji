@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { FaBullseye, FaRocket } from "react-icons/fa";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const cards = [
   {
@@ -21,24 +23,16 @@ const cards = [
 const VisionMission = () => {
   return (
     <section className="bg-linear-to-b from-white to-gray-50 py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[4px] text-blue-700">
-            Vision & Mission
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold text-gray-900 md:text-5xl">
-            Building Trust Through Quality
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Every grain of Poha we produce reflects our commitment to quality,
+        <SectionHeading
+          subtitle="Vision & Mission"
+          title="Building Trust Through Quality"
+          description=" Every grain of Poha we produce reflects our commitment to quality,
             innovation, and customer satisfaction. Our vision and mission guide
-            every step of our journey.
-          </p>
-        </div>
+            every step of our journey."
+        />
 
         {/* Cards */}
 
@@ -86,7 +80,7 @@ const VisionMission = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

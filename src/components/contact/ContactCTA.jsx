@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaArrowRight } from "react-icons/fa";
 import bg from "../../assets/images/contact/contact-cta-bg.webp";
+import Button from "../common/Button";
 
 const ContactCTA = () => {
   return (
@@ -42,32 +43,32 @@ const ContactCTA = () => {
           </p>
 
           <div className="mt-12 flex flex-wrap justify-center gap-5">
-            <a
+            <Button
               href="tel:+917698755577"
-              className="flex items-center gap-3 rounded-full bg-blue-400 px-8 py-4 font-semibold text-gray-900 transition hover:scale-105"
+              variant="lightBlue"
               aria-label="Phone"
             >
               <FaPhoneAlt />
               Call Now
-            </a>
+            </Button>
 
-            <a
+            <Button
               href="mailto:shivajigoodpoha@gmail.com"
-              className="flex items-center gap-3 rounded-full border border-white px-8 py-4 font-semibold transition hover:bg-white hover:text-blue-900"
+              variant="white"
               aria-label="Email"
             >
               <FaEnvelope />
               Email Us
-            </a>
+            </Button>
 
-            <a
+            <Button
               href="/products"
-              className="flex items-center gap-3 rounded-full bg-white px-8 py-4 font-semibold text-blue-900 transition hover:scale-105"
+              variant="white"
               aria-label="Explore Products"
             >
               Explore Products
               <FaArrowRight />
-            </a>
+            </Button>
           </div>
         </motion.div>
       </div>

@@ -11,6 +11,7 @@ import {
   FaTag,
   FaCommentDots,
 } from "react-icons/fa";
+import Button from "../common/Button";
 
 const schema = yup.object({
   name: yup.string().required("Full Name is required"),
@@ -205,15 +206,15 @@ const ContactFormSection = () => {
                 </p>
               </div>
 
-              <button
+              <Button
                 disabled={loading}
-                className="flex w-full items-center justify-center gap-3 rounded-xl bg-blue-700 py-4 font-semibold text-white transition hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-70"
+                className="rounded-xl w-full"
                 aria-label="Send Message"
               >
                 <FaPaperPlane />
 
                 {loading ? "Sending..." : "Send Message"}
-              </button>
+              </Button>
             </form>
           </div>
 

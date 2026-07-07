@@ -1,23 +1,17 @@
 import { motion } from "framer-motion";
 import homeGallery from "../../data/homeGallery";
+import Container from "../common/Container";
+import SectionHeading from "../common/SectionHeading";
 
 const GallerySection = () => {
   return (
     <section className="bg-gray-50 py-24">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="uppercase tracking-[5px] text-blue-700 font-semibold">
-            Gallery
-          </p>
-
-          <h2 className="text-4xl font-bold mt-4">
-            Inside Our Manufacturing Unit
-          </h2>
-
-          <p className="text-gray-600 mt-4">
-            Explore our premium production facilities and quality process.
-          </p>
-        </div>
+      <Container>
+        <SectionHeading
+          subtitle="Gallery"
+          title="Inside Our Manufacturing Unit"
+          description="Explore our premium production facilities and quality process."
+        />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {homeGallery.map((image, index) => (
@@ -38,7 +32,7 @@ const GallerySection = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

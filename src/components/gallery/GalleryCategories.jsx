@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import gallery from "../../data/gallery";
 import GalleryGrid from "./GalleryGrid";
 import GalleryModal from "./GalleryModal";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const categories = [
   "All",
@@ -41,18 +43,10 @@ const GalleryCategories = () => {
 
   return (
     <section className="bg-gray-50 py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mb-14 text-center">
-          <span className="font-semibold uppercase tracking-[5px] text-blue-700">
-            Our Gallery
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Explore Our Journey
-          </h2>
-        </div>
+        <SectionHeading subtitle="Our Gallery" title="Explore Our Journey" />
 
         {/* Filter */}
 
@@ -77,7 +71,7 @@ const GalleryCategories = () => {
         </div>
 
         <GalleryGrid images={filtered} onPreview={openImage} />
-      </div>
+      </Container>
 
       <GalleryModal
         images={filtered}

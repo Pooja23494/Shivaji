@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import Button from "../common/Button";
 import { FaArrowRight, FaPhoneAlt, FaIndustry } from "react-icons/fa";
 import bg from "../../assets/images/gallery/gallery-cta-bg.webp";
 
@@ -56,23 +56,19 @@ const GalleryCTA = () => {
           {/* Buttons */}
 
           <div className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-3 rounded-full bg-blue-400 px-8 py-4 font-semibold text-blue-900 transition duration-300 hover:scale-105 hover:bg-blue-300"
-              aria-label="Contact Us"
-            >
+            <Button to="/contact" aria-label="Contact Us" variant="lightBlue">
               Contact Us
               <FaArrowRight />
-            </Link>
+            </Button>
 
-            <a
+            <Button
               href="tel:+917698755577"
-              className="inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-md transition duration-300 hover:bg-white hover:text-blue-900"
               aria-label="Book Factory Visit"
+              variant="white"
             >
               <FaPhoneAlt />
               Book Factory Visit
-            </a>
+            </Button>
           </div>
 
           {/* Bottom Stats */}

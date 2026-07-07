@@ -3,6 +3,8 @@ import productData from "../../data/productData";
 import ProductFilter from "./ProductFilter";
 import ProductCard from "./ProductCard";
 import ProductModal from "./ProductModal";
+import Container from "../common/Container";
+import SectionHeading from "../common/SectionHeading";
 
 const ProductGrid = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -25,21 +27,13 @@ const ProductGrid = () => {
 
   return (
     <section className="bg-gray-50 py-24">
-      <div className="container mx-auto px-5">
-        <div className="mx-auto mb-14 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[4px] text-blue-700">
-            Our Products
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold">
-            Premium Quality Poha Collection
-          </h2>
-
-          <p className="mt-5 text-lg text-gray-600">
-            Browse our wide range of hygienically processed, premium quality
-            Poha products.
-          </p>
-        </div>
+      <Container>
+        <SectionHeading
+          subtitle="Our Products"
+          title="Premium Quality Poha Collection"
+          description=" Browse our wide range of hygienically processed, premium quality
+            Poha products."
+        />
 
         <ProductFilter
           activeCategory={activeCategory}
@@ -55,7 +49,7 @@ const ProductGrid = () => {
             />
           ))}
         </div>
-      </div>
+      </Container>
       <ProductModal
         product={selectedProduct}
         isOpen={isModalOpen}

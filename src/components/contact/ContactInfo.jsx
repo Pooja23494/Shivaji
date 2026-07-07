@@ -5,6 +5,8 @@ import {
   FaEnvelope,
   FaClock,
 } from "react-icons/fa";
+import SectionHeading from "../common/SectionHeading";
+import Container from "../common/Container";
 
 const contactInfo = [
   {
@@ -63,24 +65,16 @@ const contactInfo = [
 const ContactInfo = () => {
   return (
     <section className="bg-white py-24">
-      <div className="container mx-auto px-5">
+      <Container>
         {/* Heading */}
 
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[4px] text-blue-700">
-            Get In Touch
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            We'd Love to Hear From You
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Whether you're looking for premium quality Poha, bulk orders,
+        <SectionHeading
+          subtitle="Get In Touch"
+          title="We'd Love to Hear From You"
+          description="Whether you're looking for premium quality Poha, bulk orders,
             distributorship opportunities, or have any questions, our team is
-            here to help.
-          </p>
-        </div>
+            here to help."
+        />
 
         {/* Cards */}
 
@@ -130,7 +124,7 @@ const ContactInfo = () => {
             );
           })}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
