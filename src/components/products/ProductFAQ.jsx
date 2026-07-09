@@ -16,11 +16,6 @@ const faqs = [
       "Our products are available in 500g, 1kg, 5kg, 25kg, and 50kg packaging. Custom packaging options are also available for bulk orders.",
   },
   {
-    question: "Do you supply products in bulk?",
-    answer:
-      "Yes. We specialize in bulk orders for distributors, supermarkets, hotels, restaurants, catering businesses, and wholesalers across India.",
-  },
-  {
     question: "How do you maintain product quality?",
     answer:
       "Our Poha is manufactured using modern machinery, hygienically processed, quality tested, and packed in food-grade packaging to ensure freshness.",
@@ -29,11 +24,6 @@ const faqs = [
     question: "Do you offer dealership or distributorship opportunities?",
     answer:
       "Yes. We welcome distributors and dealers from different regions. Please contact our sales team for partnership opportunities.",
-  },
-  {
-    question: "How can I place an order?",
-    answer:
-      "You can place an order by contacting us via our Contact Form, WhatsApp, Phone, or Email. Our team will assist you with pricing and delivery details.",
   },
 ];
 

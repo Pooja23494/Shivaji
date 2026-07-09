@@ -38,7 +38,6 @@ const ContactFAQ = () => {
   return (
     <section className="bg-gray-50 py-24">
       <Container className="max-w-4xl">
-
         <SectionHeading
           subtitle="Frequently Asked Questions"
           title="Have Questions?"

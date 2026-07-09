@@ -2,7 +2,6 @@ import ContactInfo from "../components/contact/ContactInfo";
 import ContactFormSection from "../components/contact/ContactFormSection";
 import WhyContact from "../components/contact/WhyContact";
 import ContactFAQ from "../components/contact/ContactFAQ";
-import ContactCTA from "../components/contact/ContactCTA";
 import SEO from "../components/common/SEO";
 import PageBanner from "../components/common/PageBanner";
 import banner from "../assets/images/contact/contact-banner.webp";
@@ -26,7 +25,6 @@ const Contact = () => {
       <ContactFormSection />
       <WhyContact />
       <ContactFAQ />
-      <ContactCTA />
     </>
   );
 };

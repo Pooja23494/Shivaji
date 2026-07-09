@@ -29,10 +29,10 @@ const VideoModal = ({ video, isOpen, onClose }) => {
 
             <div className="aspect-video overflow-hidden rounded-3xl">
               <iframe
-                className="h-full w-full"
-                src={`https://www.youtube.com/embed/${video.youtubeId}?autoplay=1`}
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&rel=0`}
                 title={video.title}
-                allow="autoplay; encrypted-media"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
             </div>

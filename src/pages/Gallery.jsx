@@ -1,5 +1,4 @@
 import GalleryCategories from "../components/gallery/GalleryCategories";
-import ProcessSection from "../components/gallery/ProcessSection";
 import GalleryStats from "../components/gallery/GalleryStats";
 import InstagramGallery from "../components/gallery/InstagramGallery";
 import GalleryCTA from "../components/gallery/GalleryCTA";
@@ -24,7 +23,6 @@ const Gallery = () => {
         breadcrumb="Home > Gallery"
       />
       <GalleryCategories />
-      <ProcessSection />
       <GalleryStats />
       <InstagramGallery />
       <GalleryCTA />

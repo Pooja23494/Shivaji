@@ -1,5 +1,4 @@
 import ProductGrid from "../components/products/ProductGrid";
-import ProductFeatures from "../components/products/ProductFeatures";
 import PackagingSection from "../components/products/PackagingSection";
 import ProductFAQ from "../components/products/ProductFAQ";
 import ProductInquiry from "../components/products/ProductInquiry";
@@ -23,7 +22,6 @@ const Products = () => {
         breadcrumb="Home > Products"
       />
       <ProductGrid />
-      <ProductFeatures />
       <PackagingSection />
       <ProductFAQ />
       <ProductInquiry />
