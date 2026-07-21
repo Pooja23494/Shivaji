@@ -1,7 +1,7 @@
 import { useState } from "react";
-import productData from "../../data/productData";
+import product from "../../data/products";
 import ProductFilter from "./ProductFilter";
-import ProductCard from "./ProductCard";
+import ProductCard from "../home/ProductCard";
 import ProductModal from "./ProductModal";
 import Container from "../common/Container";
 import SectionHeading from "../common/SectionHeading";
@@ -22,8 +22,8 @@ const ProductGrid = () => {
 
   const filteredProducts =
     activeCategory === "All"
-      ? productData
-      : productData.filter((item) => item.category === activeCategory);
+      ? product
+      : product.filter((item) => item.category === activeCategory);
 
   return (
     <section className="bg-gray-50 py-24">
@@ -41,10 +41,10 @@ const ProductGrid = () => {
         />
 
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {filteredProducts.map((productData) => (
+          {filteredProducts.map((product) => (
             <ProductCard
-              key={productData.id}
-              productData={productData}
+              key={product.id}
+              product={product}
               onView={handleView}
             />
           ))}

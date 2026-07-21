@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaArrowRight, FaStar } from "react-icons/fa";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onView }) => {
   return (
     <motion.div
       whileHover={{ y: -12 }}
@@ -40,7 +40,8 @@ const ProductCard = ({ product }) => {
         <p className="mb-6 text-gray-600">{product.description}</p>
 
         <button
-          className="flex items-center gap-2 font-semibold text-blue-700 transition hover:gap-4"
+          onClick={() => onView?.(product)}
+          className="mt-8 flex items-center gap-3 font-semibold text-blue-700 transition hover:gap-4"
           aria-label="View Details"
         >
           View Details

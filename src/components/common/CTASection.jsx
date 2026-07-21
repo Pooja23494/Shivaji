@@ -72,13 +72,13 @@ const CTASection = () => {
             </Button>
 
             <Button
-              to="/products"
+              href="tel:+917698755577"
               className="rounded-xl"
-              aria-label="Explore Products"
+              aria-label="Book Factory Visit"
               variant="white"
             >
-              Explore Products
-              <FaArrowRight />
+              Book Factory Visit
+              <FaPhoneAlt />
             </Button>
           </div>
         </motion.div>

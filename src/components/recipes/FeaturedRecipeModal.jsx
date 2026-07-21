@@ -17,7 +17,7 @@ import {
   FaCheckCircle,
 } from "react-icons/fa";
 
-const RecipeModal = ({ recipe, isOpen, onClose }) => {
+const FeaturedRecipeModal = ({ recipe, isOpen, onClose }) => {
   const [favorite, setFavorite] = useState(false);
   const [showIngredients, setShowIngredients] = useState(false);
   const printRef = useRef();
@@ -438,4 +438,4 @@ const RecipeModal = ({ recipe, isOpen, onClose }) => {
   );
 };
 
-export default RecipeModal;
+export default FeaturedRecipeModal;

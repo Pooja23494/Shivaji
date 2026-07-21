@@ -1,4 +1,11 @@
 import Button from "../common/Button";
+import {
+  FaWhatsapp,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaArrowRight,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -15,13 +22,50 @@ const CTASection = () => {
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-5">
-            <Button to="/products" aria-label="View Products">
-              View Products
-            </Button>
+            <div className="mt-14 flex flex-wrap justify-center gap-5">
+              <Button
+                href="https://wa.me/917698755577"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 text-white hover:bg-green-600 rounded-xl"
+                aria-label="Whatsapp"
+              >
+                <FaWhatsapp size={22} />
+                WhatsApp Us
+              </Button>
 
-            <Button to="/contact" variant="outline" aria-label="Contact Us">
-              Contact Us
-            </Button>
+              <Button
+                href="tel:+917698755577"
+                className="rounded-xl"
+                variant="lightBlue"
+                aria-label="Phone"
+              >
+                <FaPhoneAlt />
+                Call Now
+              </Button>
+
+              <Button
+                href="mailto:shivajigoodpoha@gmail.com"
+                className="rounded-xl"
+                aria-label="Email"
+              >
+                <FaEnvelope />
+                Email Us
+              </Button>
+            </div>
+          </div>
+
+          {/* Contact Page Button */}
+
+          <div className="mt-10">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-3 font-semibold text-blue-400 transition hover:gap-4"
+              aria-label="Request"
+            >
+              Request a Custom Quote
+              <FaArrowRight />
+            </Link>
           </div>
         </div>
       </div>

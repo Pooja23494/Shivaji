@@ -33,8 +33,8 @@ const Hero = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button to="/products" aria-label="Explore Products">
-                Explore Products
+              <Button to="/recipes" aria-label="Explore Recipes">
+                Explore Recipes
               </Button>
 
               <Button to="/contact" variant="outline" aria-label="Contact Us">

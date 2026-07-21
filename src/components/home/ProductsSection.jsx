@@ -1,8 +1,31 @@
+import { useState } from "react";
+import products from "../../data/products.js";
+import ProductFilter from "./ProductFilter.jsx";
+import ProductCard from "./ProductCard.jsx";
+import ProductModal from "./ProductModal.jsx";
+import Container from "../common/Container";
+import SectionHeading from "../common/SectionHeading";
 import { motion } from "framer-motion";
-import ProductCard from "./ProductCard";
-import products from "../../data/products";
 
 const ProductsSection = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleView = (products) => {
+    setSelectedProduct(products);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const filteredProducts =
+    activeCategory === "All"
+      ? products
+      : products.filter((item) => item.category === activeCategory);
+
   return (
     <section className="bg-white py-24">
       <div className="container mx-auto px-6">
@@ -31,11 +54,20 @@ const ProductsSection = () => {
 
         {/* Product Grid */}
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+          {filteredProducts.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              onView={handleView}
+            />
           ))}
         </div>
       </div>
+      <ProductModal
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </section>
   );
 };

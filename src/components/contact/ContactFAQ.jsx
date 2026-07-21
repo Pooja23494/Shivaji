@@ -6,9 +6,19 @@ import Container from "../common/Container";
 
 const faqs = [
   {
+    question: "What types of Poha do you manufacture?",
+    answer:
+      "We manufacture Thick Poha, Thin Poha, Premium Poha, Jumbo Poha, and customized bulk packaging for retailers, wholesalers, and distributors.",
+  },
+  {
     question: "Do you supply Poha in bulk quantities?",
     answer:
       "Yes. We specialize in wholesale and bulk orders for distributors, retailers, supermarkets, and food businesses across India.",
+  },
+  {
+    question: "How do you maintain product quality?",
+    answer:
+      "Our Poha is manufactured using modern machinery, hygienically processed, quality tested, and packed in food-grade packaging to ensure freshness.",
   },
   {
     question: "Can I become your distributor?",

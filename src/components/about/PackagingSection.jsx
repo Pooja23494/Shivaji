@@ -165,10 +165,18 @@ const PackagingSection = () => {
           {/* Download */}
 
           <div className="mt-10 text-center">
-            <Button className="gap-3 rounded-xl" aria-label="Download">
-              <FaDownload />
-              Download Product Brochure
-            </Button>
+            <a
+              href="/brochures/shivaji-good-poha-brochure.pdf"
+              download="Shivaji-Good-Poha-Brochure.pdf"
+            >
+              <Button
+                className="gap-3 rounded-xl"
+                aria-label="Download Product Brochure"
+              >
+                <FaDownload />
+                Download Product Brochure (PDF)
+              </Button>
+            </a>
           </div>
         </div>
       </Container>

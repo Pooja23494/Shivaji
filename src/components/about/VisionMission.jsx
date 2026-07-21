@@ -9,7 +9,7 @@ const cards = [
     title: "Our Vision",
     color: "from-blue-700 to-blue-500",
     description:
-      "To become India's most trusted and preferred Poha manufacturer by delivering premium quality products with innovation, hygiene, sustainability, and customer satisfaction at the core of everything we do.",
+      "Our aim is to offer high-quality, entirely natural food staples to promote a healthier and more nutritious diet for all. We are committed to fostering local opportunities, growth, and impact throughout our entire process. Our approach focuses on developing exceptional food products for the health-conscious generations of today and the future.",
   },
   {
     icon: <FaRocket />,

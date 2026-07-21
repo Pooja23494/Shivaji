@@ -2,8 +2,7 @@ import CompanyIntro from "../components/about/CompanyIntro";
 import VisionMission from "../components/about/VisionMission";
 import CompanyTimeline from "../components/about/CompanyTimeline";
 import ManufacturingProcess from "../components/about/ManufacturingProcess";
-import Certifications from "../components/about/Certifications";
-import TeamSection from "../components/about/TeamSection";
+import PackagingSection from "../components/about/PackagingSection";
 import CTASection from "../components/common/CTASection";
 import SEO from "../components/common/SEO";
 import PageBanner from "../components/common/PageBanner";
@@ -28,8 +27,7 @@ const About = () => {
       <VisionMission />
       <CompanyTimeline />
       <ManufacturingProcess />
-      <Certifications />
-      <TeamSection />
+      <PackagingSection />
       <CTASection />
     </>
   );

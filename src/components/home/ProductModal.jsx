@@ -65,14 +65,21 @@ const ProductModal = ({ product, isOpen, onClose }) => {
             </button>
 
             <div className="grid lg:grid-cols-2">
-              <div className="overflow-hidden bg-gray-100">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
+              <div className="relative flex items-center justify-center overflow-hidden bg-linear-to-br from-blue-50 via-white to-yellow-50 p-8 lg:p-12">
+                {/* Background Decoration */}
+                <div className="absolute -left-16 -top-16 h-48 w-48 rounded-full bg-blue-200/30 blur-3xl"></div>
+                <div className="absolute -bottom-16 -right-16 h-56 w-56 rounded-full bg-yellow-200/40 blur-3xl"></div>
+
+                {/* Product Card */}
+                <div className="relative rounded-3xl bg-white p-8 shadow-2xl">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="mx-auto h-72 w-auto object-contain transition duration-500 hover:scale-105 md:h-80 lg:h-96"
+                  />
+                </div>
               </div>
 
               <div className="p-10">

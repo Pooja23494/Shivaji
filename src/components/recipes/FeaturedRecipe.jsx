@@ -1,3 +1,5 @@
+import { useState } from "react";
+import FeaturedRecipeModal from "./FeaturedRecipeModal";
 import { motion } from "framer-motion";
 import { FaClock, FaUsers, FaStar, FaFire, FaArrowRight } from "react-icons/fa";
 
@@ -7,6 +9,7 @@ import Container from "../common/Container";
 import Button from "../common/Button";
 
 const FeaturedRecipe = () => {
+  const [open, setOpen] = useState(false);
   return (
     <section className="bg-white py-24">
       <Container>
@@ -113,7 +116,7 @@ const FeaturedRecipe = () => {
 
               {/* Button */}
 
-              <Button className="mt-10" aria-label="View Recipe">
+              <Button className="mt-10" onClick={() => setOpen(true)}>
                 View Full Recipe
                 <FaArrowRight />
               </Button>
@@ -121,6 +124,11 @@ const FeaturedRecipe = () => {
           </div>
         </motion.div>
       </Container>
+      <FeaturedRecipeModal
+        recipe={featuredRecipe}
+        isOpen={open}
+        onClose={() => setOpen(false)}
+      />
     </section>
   );
 };
