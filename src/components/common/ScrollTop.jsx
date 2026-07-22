@@ -14,21 +14,29 @@ const ScrollTop = () => {
     return () => window.removeEventListener("scroll", scroll);
   }, []);
 
+  if (!show) return null;
+
   return (
-    show && (
-      <button
-        onClick={() =>
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          })
-        }
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-blue-700 text-white shadow-xl transition hover:bg-blue-800"
-        aria-label="Arrow Up"
-      >
-        <FaArrowUp />
-      </button>
-    )
+    <button
+      onClick={() =>
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        })
+      }
+      className="
+        fixed bottom-15 right-2 z-40
+        flex h-14 w-14 items-center justify-center
+        rounded-full bg-blue-700
+        text-white
+        shadow-xl
+        transition hover:scale-110 hover:bg-blue-800
+        lg:bottom-6 lg:right-6
+      "
+      aria-label="Scroll to top"
+    >
+      <FaArrowUp />
+    </button>
   );
 };
 

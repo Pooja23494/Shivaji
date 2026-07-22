@@ -5,9 +5,17 @@ const WhatsappButton = () => {
     <a
       href="https://wa.me/917698755577"
       target="_blank"
-      rel="noreferrer"
-      className="fixed bottom-6 left-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-3xl text-white shadow-2xl transition hover:scale-110"
-      aria-label="Whatsapp"
+      rel="noopener noreferrer"
+      className="
+        fixed bottom-15 left-2 z-40
+        flex h-14 w-14 items-center justify-center
+        rounded-full bg-green-500
+        text-3xl text-white
+        shadow-2xl
+        transition hover:scale-110
+        lg:bottom-6 lg:left-6
+      "
+      aria-label="Contact on WhatsApp"
     >
       <FaWhatsapp />
     </a>

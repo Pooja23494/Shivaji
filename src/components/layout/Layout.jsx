@@ -9,7 +9,7 @@ const Layout = () => {
     <>
       <Navbar />
 
-      <main className="pt-20">
+      <main className="pt-20 pb-24 lg:pb-0">
         <Outlet />
       </main>
 

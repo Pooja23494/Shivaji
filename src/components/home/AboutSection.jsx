@@ -48,10 +48,10 @@ const AboutSection = () => {
           >
             <img
               src={aboutImage}
-              alt="about image"
-              className="rounded-3xl shadow-2xl"
-              width={455}
-              height={271}
+              alt="Shivaji Good Poha Factory"
+              className="h-64 w-full rounded-3xl object-cover shadow-2xl lg:h-96 xl:h-110"
+              width={600}
+              height={540}
               loading="lazy"
               decoding="async"
             />
